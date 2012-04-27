@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @obligation_rule.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @obligation_rule.description %>
+</p>
+
+<p>
+  <b>Repeat:</b>
+  <%= @obligation_rule.repeat %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @obligation_rule.type %>
+</p>
+
+<p>
+  <b>Agreement:</b>
+  <%= @obligation_rule.agreement_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_obligation_rule_path(@obligation_rule) %> |
+<%= link_to 'Back', obligation_rules_path %>

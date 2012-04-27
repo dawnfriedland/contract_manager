@@ -1,0 +1,41 @@
+<%= form_for(@one_time_obligation) do |f| %>
+  <% if @one_time_obligation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@one_time_obligation.errors.count, "error") %> prohibited this one_time_obligation from being saved:</h2>
+
+      <ul>
+      <% @one_time_obligation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :obligation_rule_id %><br />
+    <%= f.number_field :obligation_rule_id %>
+  </div>
+  <div class="field">
+    <%= f.label :due_date %><br />
+    <%= f.date_select :due_date %>
+  </div>
+  <div class="field">
+    <%= f.label :is_dependent %><br />
+    <%= f.check_box :is_dependent %>
+  </div>
+  <div class="field">
+    <%= f.label :monetary %><br />
+    <%= f.check_box :monetary %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

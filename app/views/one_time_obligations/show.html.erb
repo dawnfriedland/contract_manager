@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @one_time_obligation.name %>
+</p>
+
+<p>
+  <b>Obligation rule:</b>
+  <%= @one_time_obligation.obligation_rule_id %>
+</p>
+
+<p>
+  <b>Due date:</b>
+  <%= @one_time_obligation.due_date %>
+</p>
+
+<p>
+  <b>Is dependent:</b>
+  <%= @one_time_obligation.is_dependent %>
+</p>
+
+<p>
+  <b>Monetary:</b>
+  <%= @one_time_obligation.monetary %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @one_time_obligation.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_one_time_obligation_path(@one_time_obligation) %> |
+<%= link_to 'Back', one_time_obligations_path %>

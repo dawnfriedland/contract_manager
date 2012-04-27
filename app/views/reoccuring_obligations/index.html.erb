@@ -1,0 +1,43 @@
+<h1>Listing reoccuring_obligations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Obligation rule</th>
+    <th>Frequency</th>
+    <th>Frequency period</th>
+    <th>Duration</th>
+    <th>Duration period</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Is dependent</th>
+    <th>Monetary</th>
+    <th>Amount</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @reoccuring_obligations.each do |reoccuring_obligation| %>
+  <tr>
+    <td><%= reoccuring_obligation.name %></td>
+    <td><%= reoccuring_obligation.obligation_rule_id %></td>
+    <td><%= reoccuring_obligation.frequency %></td>
+    <td><%= reoccuring_obligation.frequency_period %></td>
+    <td><%= reoccuring_obligation.duration %></td>
+    <td><%= reoccuring_obligation.duration_period %></td>
+    <td><%= reoccuring_obligation.start_date %></td>
+    <td><%= reoccuring_obligation.end_date %></td>
+    <td><%= reoccuring_obligation.is_dependent %></td>
+    <td><%= reoccuring_obligation.monetary %></td>
+    <td><%= reoccuring_obligation.amount %></td>
+    <td><%= link_to 'Show', reoccuring_obligation %></td>
+    <td><%= link_to 'Edit', edit_reoccuring_obligation_path(reoccuring_obligation) %></td>
+    <td><%= link_to 'Destroy', reoccuring_obligation, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Reoccuring obligation', new_reoccuring_obligation_path %>

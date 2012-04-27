@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @obligation.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @obligation.description %>
+</p>
+
+<p>
+  <b>Due date:</b>
+  <%= @obligation.due_date %>
+</p>
+
+<p>
+  <b>Met:</b>
+  <%= @obligation.met %>
+</p>
+
+<p>
+  <b>Date met:</b>
+  <%= @obligation.date_met %>
+</p>
+
+<p>
+  <b>Monetary:</b>
+  <%= @obligation.monetary %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @obligation.amount %>
+</p>
+
+<p>
+  <b>Invoice number:</b>
+  <%= @obligation.invoice_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_obligation_path(@obligation) %> |
+<%= link_to 'Back', obligations_path %>

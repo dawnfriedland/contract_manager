@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  ipp_agreement_guid: MyString
+  contract_manager: MyString
+  set_up_complete: false
+
+two:
+  name: MyString
+  ipp_agreement_guid: MyString
+  contract_manager: MyString
+  set_up_complete: false

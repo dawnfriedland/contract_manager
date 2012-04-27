@@ -1,0 +1,33 @@
+<h1>Listing one_time_obligations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Obligation rule</th>
+    <th>Due date</th>
+    <th>Is dependent</th>
+    <th>Monetary</th>
+    <th>Amount</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @one_time_obligations.each do |one_time_obligation| %>
+  <tr>
+    <td><%= one_time_obligation.name %></td>
+    <td><%= one_time_obligation.obligation_rule_id %></td>
+    <td><%= one_time_obligation.due_date %></td>
+    <td><%= one_time_obligation.is_dependent %></td>
+    <td><%= one_time_obligation.monetary %></td>
+    <td><%= one_time_obligation.amount %></td>
+    <td><%= link_to 'Show', one_time_obligation %></td>
+    <td><%= link_to 'Edit', edit_one_time_obligation_path(one_time_obligation) %></td>
+    <td><%= link_to 'Destroy', one_time_obligation, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New One time obligation', new_one_time_obligation_path %>

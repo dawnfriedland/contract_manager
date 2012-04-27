@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @reoccuring_obligation.name %>
+</p>
+
+<p>
+  <b>Obligation rule:</b>
+  <%= @reoccuring_obligation.obligation_rule_id %>
+</p>
+
+<p>
+  <b>Frequency:</b>
+  <%= @reoccuring_obligation.frequency %>
+</p>
+
+<p>
+  <b>Frequency period:</b>
+  <%= @reoccuring_obligation.frequency_period %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%= @reoccuring_obligation.duration %>
+</p>
+
+<p>
+  <b>Duration period:</b>
+  <%= @reoccuring_obligation.duration_period %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @reoccuring_obligation.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @reoccuring_obligation.end_date %>
+</p>
+
+<p>
+  <b>Is dependent:</b>
+  <%= @reoccuring_obligation.is_dependent %>
+</p>
+
+<p>
+  <b>Monetary:</b>
+  <%= @reoccuring_obligation.monetary %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @reoccuring_obligation.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_reoccuring_obligation_path(@reoccuring_obligation) %> |
+<%= link_to 'Back', reoccuring_obligations_path %>

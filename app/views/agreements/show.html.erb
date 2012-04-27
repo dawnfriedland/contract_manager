@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @agreement.name %>
+</p>
+
+<p>
+  <b>Ipp agreement guid:</b>
+  <%= @agreement.ipp_agreement_guid %>
+</p>
+
+<p>
+  <b>Contract manager:</b>
+  <%= @agreement.contract_manager %>
+</p>
+
+<p>
+  <b>Set up complete:</b>
+  <%= @agreement.set_up_complete %>
+</p>
+
+
+<%= link_to 'Edit', edit_agreement_path(@agreement) %> |
+<%= link_to 'Back', agreements_path %>
