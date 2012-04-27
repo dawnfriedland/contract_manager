@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120427001641) do
+ActiveRecord::Schema.define(:version => 20120427180629) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -58,11 +58,10 @@ ActiveRecord::Schema.define(:version => 20120427001641) do
   create_table "obligation_rules", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.boolean  "repeat"
-    t.string   "type"
+    t.string   "obligation_type"
     t.integer  "agreement_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "obligations", :force => true do |t|
