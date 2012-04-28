@@ -4,21 +4,24 @@ ActiveAdmin.register ObligationRule do
      #######################
 
      index do
-       column :name
-       column :obligation_type
+      column :name
+      column ("Obligation Type") do |t|
+        t.obligation_type
+      end
        column :description
-       column ("Repeats?") do |r|
-         r.repeat.to_english
+       column "Obligation Rule Dependencies" do |p|
+         p.obligation_rule_dependencies.size 
        end
-       column("View Agreement in IPP") do |a|
-         link_to "Agreement in IPP", "/path_to_IPP/" + obligation_rule.agreement.ipp_agreement_guid
-       end
+       # column("View Agreement in IPP") do |a|
+       #   link_to "Agreement in IPP", "/path_to_IPP/" + obligation_rule.agreement.ipp_agreement_guid
+       # end
        default_actions
      end
 
      #######################
      # SHOW
      #######################
+     # TO DO: figure out why the :repeat attribute displays on the default show active admin page
      # show do
      #   panel "Obligation Rules "do 
      #      if obligation_rules.size > 0
@@ -44,7 +47,7 @@ ActiveAdmin.register ObligationRule do
      #######################
      # NEW AND EDIT
      #######################
-     #:agreement_id, :description, :name, :repeat, :type
+     #:agreement_id, :description, :name, :obligation_type
      form :html => { :enctype => "multipart/form-data" } do |f|        
         if controller.action_name == "new" and params['agreement_id'].to_i > 0         
           parent_agreement = Agreement.find(params['agreement_id'])                      #get it from the querystring

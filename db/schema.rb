@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120427180629) do
+ActiveRecord::Schema.define(:version => 20120428000231) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -55,9 +55,17 @@ ActiveRecord::Schema.define(:version => 20120427180629) do
     t.datetime "updated_at",         :null => false
   end
 
+  create_table "obligation_rule_dependencies", :force => true do |t|
+    t.integer  "obligation_rule_id"
+    t.integer  "dependency"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
   create_table "obligation_rules", :force => true do |t|
     t.string   "name"
     t.text     "description"
+    t.boolean  "repeat"
     t.string   "obligation_type"
     t.integer  "agreement_id"
     t.datetime "created_at",      :null => false

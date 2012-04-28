@@ -19,7 +19,7 @@ ActiveAdmin.register Agreement do
      #######################
      # SHOW
      #######################
-     show do
+     show title: :name do
        panel "Obligation Rules "do 
           if agreement.obligation_rules.size > 0
             agreement.obligation_rules.each do |rule|
@@ -57,7 +57,7 @@ ActiveAdmin.register Agreement do
      #######################
 
      action_item only: :show do
-       link_to "View in IPP", "http://c4cprod.admin.washington.edu/path_to_IPP/?#{agreement.id}"
+       link_to "View in IPP", "http://c4cprod.admin.washington.edu/path_to_IPP/?#{agreement.ipp_agreement_guid}"
      end
 
      action_item only: :show do
